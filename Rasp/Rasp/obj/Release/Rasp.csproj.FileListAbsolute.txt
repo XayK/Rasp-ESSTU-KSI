@@ -1,0 +1,69 @@
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Release\Rasp.csproj.ResolveComReference.cache
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Release\Rasp.Form1.resources
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Release\Rasp.Form2.resources
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Release\Rasp.Form3.resources
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Release\Rasp.csproj.GenerateResource.Cache
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Release\Rasp.csprojResolveAssemblyReference.cache
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Release\Rasp.Form4.resources
+D:\My documents\Visual Studio 2015\Projects\Rasp\Rasp\bin\Release\SheduleSI.exe.config
+D:\My documents\Visual Studio 2015\Projects\Rasp\Rasp\bin\Release\SheduleSI.exe
+D:\My documents\Visual Studio 2015\Projects\Rasp\Rasp\bin\Release\SheduleSI.pdb
+D:\My documents\Visual Studio 2015\Projects\Rasp\Rasp\obj\Release\SheduleSI.Properties.Resources.resources
+D:\My documents\Visual Studio 2015\Projects\Rasp\Rasp\obj\Release\SheduleSI.exe
+D:\My documents\Visual Studio 2015\Projects\Rasp\Rasp\obj\Release\SheduleSI.pdb
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\bin\Release\SheduleSI.exe.config
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csproj.ResolveComReference.cache
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.exe
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.pdb
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\bin\Release\SheduleSI.exe
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\bin\Release\SheduleSI.pdb
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csprojResolveAssemblyReference.cache
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form1.resources
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form2.resources
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form3.resources
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form4.resources
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.Properties.Resources.resources
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Release\SheduleSI.exe.config
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csproj.ResolveComReference.cache
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.exe
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.pdb
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form1.resources
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form2.resources
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form3.resources
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form4.resources
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.Properties.Resources.resources
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Release\SheduleSI.exe
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Release\SheduleSI.pdb
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Release\SheduleSI.exe.config
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csproj.ResolveComReference.cache
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.exe
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.pdb
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Release\SheduleSI.exe
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Release\SheduleSI.pdb
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csprojResolveAssemblyReference.cache
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form1.resources
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form2.resources
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form3.resources
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form4.resources
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.Properties.Resources.resources
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csproj.GenerateResource.Cache
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Release\Resources\shablon.xlsx
+C:\Users\xayk\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.g.resources
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Release\SheduleSI.exe.config
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csproj.ResolveComReference.cache
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.exe
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.pdb
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Release\Resources\shablon.xlsx
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Release\SheduleSI.exe
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Release\SheduleSI.pdb
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csprojResolveAssemblyReference.cache
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.g.resources
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form1.resources
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form2.resources
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form3.resources
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form4.resources
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.Properties.Resources.resources
+C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csproj.GenerateResource.Cache

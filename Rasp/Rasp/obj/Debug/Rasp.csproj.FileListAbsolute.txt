@@ -1,0 +1,39 @@
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Debug\Rasp.Form1.resources
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Debug\Rasp.csproj.GenerateResource.Cache
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Debug\Rasp.csprojResolveAssemblyReference.cache
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Debug\Rasp.csproj.ResolveComReference.cache
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Debug\Rasp.Form2.resources
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Debug\Rasp.Form3.resources
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Debug\Rasp.Form4.resources
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\bin\Debug\SheduleSI.exe.config
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\bin\Debug\SheduleSI.exe
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\bin\Debug\SheduleSI.pdb
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Debug\SheduleSI.Properties.Resources.resources
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Debug\SheduleSI.exe
+d:\my documents\visual studio 2015\Projects\Rasp\Rasp\obj\Debug\SheduleSI.pdb
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\bin\Debug\SheduleSI.exe.config
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.csproj.ResolveComReference.cache
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Debug\SheduleSI.exe
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Debug\SheduleSI.pdb
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\bin\Debug\SheduleSI.exe
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\bin\Debug\SheduleSI.pdb
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.csprojResolveAssemblyReference.cache
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.Form1.resources
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.Form2.resources
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.Form3.resources
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.Form4.resources
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Debug\SheduleSI.Properties.Resources.resources
+C:\Users\admin.SI\Desktop\Расрисание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Debug\SheduleSI.exe.config
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.csproj.ResolveComReference.cache
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Debug\SheduleSI.exe
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Debug\SheduleSI.pdb
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Debug\SheduleSI.exe
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\bin\Debug\SheduleSI.pdb
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.Form1.resources
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.Form2.resources
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.Form3.resources
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.Form4.resources
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Debug\SheduleSI.Properties.Resources.resources
+C:\Users\admin\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Debug\Rasp.csproj.GenerateResource.Cache
