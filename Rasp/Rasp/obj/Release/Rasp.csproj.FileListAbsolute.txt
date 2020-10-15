@@ -67,3 +67,50 @@ C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release
 C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.Form4.resources
 C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\SheduleSI.Properties.Resources.resources
 C:\Users\xayk.KSI\Desktop\Расписание Каф СИ\Rasp\Rasp\obj\Release\Rasp.csproj.GenerateResource.Cache
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\bin\Release\SheduleSI.exe.config
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.csproj.ResolveComReference.cache
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\SheduleSI.exe
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\SheduleSI.pdb
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\bin\Release\Resources\shablon.xlsx
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\bin\Release\SheduleSI.exe
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\bin\Release\SheduleSI.pdb
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.csprojResolveAssemblyReference.cache
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\SheduleSI.g.resources
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.Form1.resources
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.Form2.resources
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.Form3.resources
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.Form4.resources
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\SheduleSI.Properties.Resources.resources
+C:\Users\xayk.KOMPANDREYA\Downloads\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.csproj.GenerateResource.Cache
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\bin\Release\SheduleSI.exe.config
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.csproj.ResolveComReference.cache
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\SheduleSI.exe
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\SheduleSI.pdb
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\bin\Release\Resources\shablon.xlsx
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\bin\Release\SheduleSI.exe
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\bin\Release\SheduleSI.pdb
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.csprojResolveAssemblyReference.cache
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\SheduleSI.g.resources
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.Form1.resources
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.Form2.resources
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.Form3.resources
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.Form4.resources
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\SheduleSI.Properties.Resources.resources
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\Rasp.csproj.GenerateResource.Cache
+D:\Расписание для всех\Rasp-ESSTU-KSI-master\Rasp\Rasp\obj\Release\SheduleSI.Form5.resources
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\bin\Release\Resources\shablon.xlsx
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\bin\Release\SheduleSI.exe.config
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\bin\Release\SheduleSI.exe
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\bin\Release\SheduleSI.pdb
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\obj\Release\Rasp.csprojResolveAssemblyReference.cache
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\obj\Release\Rasp.csproj.ResolveComReference.cache
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\obj\Release\SheduleSI.g.resources
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\obj\Release\Rasp.Form1.resources
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\obj\Release\Rasp.Form2.resources
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\obj\Release\Rasp.Form3.resources
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\obj\Release\Rasp.Form4.resources
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\obj\Release\SheduleSI.Form5.resources
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\obj\Release\SheduleSI.Properties.Resources.resources
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\obj\Release\Rasp.csproj.GenerateResource.Cache
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\obj\Release\SheduleSI.exe
+C:\Users\xayk.KOMPANDREYA\Source\Repos\Rasp-ESSTU-KSI\Rasp\Rasp\obj\Release\SheduleSI.pdb

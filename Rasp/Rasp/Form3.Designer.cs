@@ -49,18 +49,18 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 13);
+            this.label1.Size = new System.Drawing.Size(184, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Расписание каф. СИ, ВСГУТУ ©";
+            this.label1.Text = "Расписание аудиторий, ВСГУТУ ©";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 13);
+            this.label2.Size = new System.Drawing.Size(210, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Разработано : Веселов А.В.  ";
+            this.label2.Text = "Разработано : Веселов А.В. ; Version 1.3";
             // 
             // label3
             // 
@@ -70,9 +70,9 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Location = new System.Drawing.Point(149, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 15);
+            this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 3;
-            this.label3.Text = "г. Улан-Удэ, 2017 г.";
+            this.label3.Text = "г. Улан-Удэ";
             // 
             // Form3
             // 

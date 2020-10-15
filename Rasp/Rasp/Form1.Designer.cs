@@ -45,6 +45,7 @@
             this.поПреподавателямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поАудиториямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.загрузитьРасписаниеВсехToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -179,6 +180,7 @@
             this.главноеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.работаСExcelToolStripMenuItem,
             this.настройкиToolStripMenuItem,
+            this.загрузитьРасписаниеВсехToolStripMenuItem,
             this.обновитьToolStripMenuItem,
             this.toolStripSeparator1,
             this.выходToolStripMenuItem});
@@ -192,7 +194,7 @@
             this.поПреподавателямToolStripMenuItem,
             this.поАудиториямToolStripMenuItem});
             this.работаСExcelToolStripMenuItem.Name = "работаСExcelToolStripMenuItem";
-            this.работаСExcelToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.работаСExcelToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.работаСExcelToolStripMenuItem.Text = "Сохранить как";
             // 
             // поПреподавателямToolStripMenuItem
@@ -212,26 +214,33 @@
             // настройкиToolStripMenuItem
             // 
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.настройкиToolStripMenuItem.Text = "Настройки";
             this.настройкиToolStripMenuItem.Click += new System.EventHandler(this.настройкиToolStripMenuItem_Click);
+            // 
+            // загрузитьРасписаниеВсехToolStripMenuItem
+            // 
+            this.загрузитьРасписаниеВсехToolStripMenuItem.Name = "загрузитьРасписаниеВсехToolStripMenuItem";
+            this.загрузитьРасписаниеВсехToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.загрузитьРасписаниеВсехToolStripMenuItem.Text = "Загрузить расписание всех";
+            this.загрузитьРасписаниеВсехToolStripMenuItem.Click += new System.EventHandler(this.загрузитьРасписаниеВсехToolStripMenuItem_Click);
             // 
             // обновитьToolStripMenuItem
             // 
             this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
-            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.обновитьToolStripMenuItem.Text = "Обновить расписание (F5)";
             this.обновитьToolStripMenuItem.Click += new System.EventHandler(this.обновитьToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(216, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(219, 6);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -247,14 +256,14 @@
             // помощьToolStripMenuItem1
             // 
             this.помощьToolStripMenuItem1.Name = "помощьToolStripMenuItem1";
-            this.помощьToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.помощьToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
             this.помощьToolStripMenuItem1.Text = "Помощь";
             this.помощьToolStripMenuItem1.Click += new System.EventHandler(this.помощьToolStripMenuItem1_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -273,7 +282,6 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(140, 57);
             this.comboBox1.Name = "comboBox1";
@@ -309,7 +317,7 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(302, 37);
             this.button1.Name = "button1";
@@ -389,6 +397,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem загрузитьРасписаниеВсехToolStripMenuItem;
     }
 }
 

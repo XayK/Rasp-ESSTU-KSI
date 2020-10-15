@@ -10,13 +10,19 @@ using System.Windows.Forms;
 using System.Net;
 using System.IO;
 using System.Text.RegularExpressions;
-using Excel=Microsoft.Office.Interop.Excel;
+using Excel = Microsoft.Office.Interop.Excel;
 using Microsoft.Office.Core;
+using SheduleSI;
+using System.Threading;
 
 namespace Rasp
 {
+    /// <summary>
+    /// ///
+    /// </summary>
     public partial class Form1 : Form
     {
+        /*          COMPARATOR          */
         class PeopleComparer : IComparer<Auditor>
         {
             public int Compare(Auditor p1, Auditor p2)
@@ -29,8 +35,10 @@ namespace Rasp
                     return 0;
             }
         }
+        /*   ---------------------    */
 
 
+        /*          CLASS TEACHER          */
         class Teacher
         {
             public string name;
@@ -60,7 +68,10 @@ namespace Rasp
             }
             
         }
-        class Auditor:Teacher
+        /*   ---------------------    */
+
+        /*          CLASS TEACHER          */
+        class Auditor :Teacher
         {
             static List<string> exists=new List<string>();
             public Auditor() : base()
@@ -84,6 +95,9 @@ namespace Rasp
             }
 
         }
+        /*   ---------------------    */
+
+        /*   Class for record of a pair    */
         public struct record
         {
             public string teacher;
@@ -100,13 +114,14 @@ namespace Rasp
                 return group + ' ' + teacher + ' ' + subject;
             }
         }
-
+        /*   ---------------------    */
         public class Pair<T, K>
         {
             public T First { get; set; }
             public K Second { get; set; }
         }
 
+        /*   Announcments    */
         List<string> mass = new List<string>();
         string line;
         List<Teacher> Tmass = new List<Teacher>();
@@ -114,7 +129,16 @@ namespace Rasp
         Stack<Pair<int, int>> htmlopen = new Stack<Pair<int, int>>();
         bool colledge = true;
 
-      
+        string linkb = "https://portal.esstu.ru/bakalavriat/Caf42.htm",
+               linkm = "https://portal.esstu.ru/spezialitet/Caf44.htm";
+
+        int indexFromCaf=1;
+        int indexToCaf=53;
+
+        Form5 loadForm = new Form5();
+        /*   ---------------------    */
+
+
         public Form1()
         {
             InitializeComponent();
@@ -166,9 +190,9 @@ namespace Rasp
                 }
             }
 
-            ////
-            //dataGridView1.Visible = false;///////
-            start();
+         
+            start(linkb,linkm);
+          
             for (int x = 0; x < 13; x++)
             {
                 dataGridView1.Rows.Add();
@@ -203,16 +227,38 @@ namespace Rasp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            show();
-            
-        }
-        string linkb= "https://portal.esstu.ru/bakalavriat/Caf42.htm",
-               linkm= "https://portal.esstu.ru/spezialitet/Caf44.htm";
-        public void start()
-        {
             try
             {
-                GetHTML(linkb);//ввод ссылки
+                show();
+            }
+            catch
+            {
+                MessageBox.Show("Вы ввели несуществующую аудиторию/преподавателя!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+        
+        public void start(string linkFromBak, string linkFromMag)
+        {
+            Thread t = new Thread(new ParameterizedThreadStart(startThread));
+
+            loadForm.Run = true;
+            t.Start((linkFromBak));
+            loadForm.draws();
+            loadForm.ShowDialog();
+         
+
+            
+        }
+
+        public void startThread(object x)
+        {
+            string linkFromBak = x.ToString();
+            string linkFromMag = x.ToString().Replace("bakalavriat", "spezialitet");
+
+            try
+            {
+                GetHTML(linkFromBak);//ввод ссылки
             }
             catch
             {
@@ -224,30 +270,14 @@ namespace Rasp
 
 
             mass.RemoveAt(0); mass.RemoveAt(0);
-            /* string[] newmas = new string[mass.Count];
 
-             mass.CopyTo(newmas,0);
-             newmas[mass.Count - 1] = "";
-             listBox1.Items.AddRange(newmas);*/
             NextParser('b');
-            //if (radioButton2.Checked)
-            //{
-            //    for (int i = 0; i < Aud.Count; i++)
-            //    {
-            //        comboBox1.Items.Add(Aud[i].getname());
-            //    } 
-            //}
-            //else
-            //    for (int i = 0; i < Tmass.Count; i++)
-            //    {
-            //        comboBox1.Items.Add(Tmass[i].getname());
-            //    }
 
             /////////////////
             mass.Clear();
             try
             {
-                GetHTML(linkm);//ввод ссылки
+                GetHTML(linkFromMag);//ввод ссылки
             }
             catch
             {
@@ -266,15 +296,26 @@ namespace Rasp
             {
                 for (int i = 0; i < Aud.Count; i++)
                 {
-                    comboBox1.Items.Add(Aud[i].getname());
+                    if (IsHandleCreated)
+                        this.Invoke((MethodInvoker)delegate
+                        {
+                            comboBox1.Items.Add(Aud[i].getname());
+                        });
+                    else comboBox1.Items.Add(Aud[i].getname());
                 }
             }
             else
                 for (int i = 0; i < Tmass.Count; i++)
                 {
-                    comboBox1.Items.Add(Tmass[i].getname());
+                    if(IsHandleCreated)
+                        this.Invoke((MethodInvoker)delegate
+                        {
+                            comboBox1.Items.Add(Tmass[i].getname());
+                        });
+                    else comboBox1.Items.Add(Tmass[i].getname());
                 }
-
+            loadForm.Run = false;
+          //  loadForm.Close();
         }
 
         public void show()
@@ -381,8 +422,16 @@ namespace Rasp
                     int plus;
                     if (flag == 1) plus = 0;
                     else plus = 6;
-                    if (mass[i] == "Пнд")
+                ////////////////////////////////////////////////
+                    if (mass[i] == "Пнд" || mass[i] == "Втр" || mass[i] == "Срд" || mass[i] == "Чтв" || mass[i] == "Птн" || mass[i] == "Сбт")
                     {
+                        int dayNumber = 0;
+                        if (mass[i] == "Втр") dayNumber = 1;
+                        if (mass[i] == "Срд") dayNumber = 2;
+                        if (mass[i] == "Чтв") dayNumber = 3;
+                        if (mass[i] == "Птн") dayNumber = 4;
+                        if (mass[i] == "Сбт") dayNumber = 5;
+
                         for (int tmpi = 0; tmpi < 6; tmpi++)
                         {
                             i++;
@@ -391,72 +440,20 @@ namespace Rasp
                             else
                             {
                                 record temprec = takeapart(mass[i]);
-                                if ((temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K') && colledge == false)
-                                    break;
-                                temprec.teacher = temp.getname();
-                                if (type == 'b')
-                                    temp.setsubject(temprec.toTeacher(), 0 + plus, tmpi);
-                                else if (temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K' || temprec.group[0] == 'М' ||  temprec.group[1] == 'М')
+                                try
                                 {
-                                    bool checkflag1 = true;
-
-
-                                    for (int search = 0; search < Tmass.Count; search++)
-                                    {
-                                        if (temp.getname() == Tmass[search].getname())
-                                        {
-                                            Tmass[search].setsubject(temprec.toTeacher(), 0 + plus, tmpi);
-                                            checkflag1 = false;
-                                        }
-                                    }
-
-                                    if(checkflag1)
-                                    {
-                                        temp.setsubject(temprec.toTeacher(), 0 + plus, tmpi);
-                                        inputcounter++;
-                                    }
-
-
+                                    if ((temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K') && colledge == false)
+                                        break;
                                 }
-                                if (type == 'b' || inputcounter>0)
-                                    if (Auditor.Contains(temprec.aud))
-                                    {
-                                        for (int tempi = 0; tempi < Aud.Count(); tempi++)
-                                        {
-                                            if (Aud[tempi].name == temprec.aud)
-                                            {
-                                                Aud[tempi].setsubject(temprec.toAud(), 0 + plus, tmpi);
-                                                break;
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                        Auditor tempaud = new Auditor();
-                                        tempaud.setname(temprec.aud);
-                                        tempaud.setsubject(temprec.toAud(), 0 + plus, tmpi);
-                                        Aud.Add(tempaud);
-                                    }
-                            }
-                        }
-                        //////////////////////////////////
-
-                    }
-                    else if(mass[i] == "Втр")
-                    {
-                        for (int tmpi = 0; tmpi < 6; tmpi++)
-                        {
-                            i++;
-                            if (mass[i].Contains('_'))
-                                mass[i] = "       ";
-                            else
-                            {
-                                record temprec = takeapart(mass[i]);
-                                if ((temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K') && colledge == false)
+                                catch
+                                {
                                     break;
+                                }
                                 temprec.teacher = temp.getname();
+                                ////////////////////////////////
                                 if (type == 'b')
-                                    temp.setsubject(temprec.toTeacher(), 1 + plus, tmpi);
+                                    temp.setsubject(temprec.toTeacher(), dayNumber + plus, tmpi);
+                                ///////////////////////////////
                                 else if (temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K' || temprec.group[0] == 'М' || temprec.group[1] == 'М')
                                 {
                                     bool checkflag1 = true;
@@ -466,25 +463,29 @@ namespace Rasp
                                     {
                                         if (temp.getname() == Tmass[search].getname())
                                         {
-                                            Tmass[search].setsubject(temprec.toTeacher(), 1 + plus, tmpi);
+                                            Tmass[search].setsubject(temprec.toTeacher(), dayNumber + plus, tmpi);
                                             checkflag1 = false;
                                         }
                                     }
 
                                     if (checkflag1)
                                     {
-                                        temp.setsubject(temprec.toTeacher(), 1 + plus, tmpi);
+                                        temp.setsubject(temprec.toTeacher(), dayNumber + plus, tmpi);
                                         inputcounter++;
                                     }
+
+
                                 }
-                                if (type == 'b' || inputcounter >0)
+                                ///////////////////////////////////////////////////
+                                if (type == 'b' || inputcounter > 0)
+                                    /*   */
                                     if (Auditor.Contains(temprec.aud))
                                     {
                                         for (int tempi = 0; tempi < Aud.Count(); tempi++)
                                         {
                                             if (Aud[tempi].name == temprec.aud)
                                             {
-                                                Aud[tempi].setsubject(temprec.toAud(), 1 + plus, tmpi);
+                                                Aud[tempi].setsubject(temprec.toAud(), dayNumber + plus, tmpi);
                                                 break;
                                             }
                                         }
@@ -493,265 +494,26 @@ namespace Rasp
                                     {
                                         Auditor tempaud = new Auditor();
                                         tempaud.setname(temprec.aud);
-                                        tempaud.setsubject(temprec.toAud(), 1 + plus, tmpi);
+                                        tempaud.setsubject(temprec.toAud(), dayNumber + plus, tmpi);
                                         Aud.Add(tempaud);
                                     }
+                                    
+                                ///////////////////////////////////////////////////
                             }
                         }
-                        //////////////////////////////////
-                    }
-                    else if (mass[i] == "Срд")
-                    {
-                        for (int tmpi = 0; tmpi < 6; tmpi++)
-                        {
-                            i++;
-                            if (mass[i].Contains('_'))
-                                mass[i] = "       ";
-                            else
+                        /*  Record of a Teacher */
+                       if(dayNumber==5)
+                            if (flag == 1) flag = 2;
+                            //else if(type=='b')
+                            else if (inputcounter > 0 || type == 'b')
                             {
-                                record temprec = takeapart(mass[i]);
-                                if ((temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K') && colledge == false)
-                                    break;
-                                temprec.teacher = temp.getname();
-                                if (type == 'b')
-                                    temp.setsubject(temprec.toTeacher(), 2 + plus, tmpi);
-                                else if (temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K' || temprec.group[0] == 'М' || temprec.group[1] == 'М')
-                                {
-                                    bool checkflag1 = true;
-
-
-                                    for (int search = 0; search < Tmass.Count; search++)
-                                    {
-                                        if (temp.getname() == Tmass[search].getname())
-                                        {
-                                            Tmass[search].setsubject(temprec.toTeacher(), 2 + plus, tmpi);
-                                            checkflag1 = false;
-                                        }
-                                    }
-
-                                    if (checkflag1)
-                                    {
-                                        temp.setsubject(temprec.toTeacher(), 2 + plus, tmpi);
-                                        inputcounter++;
-                                    }
-                                }
-                                if (type == 'b' || inputcounter>0)  
-                                    if (Auditor.Contains(temprec.aud))
-                                    {
-                                        for (int tempi = 0; tempi < Aud.Count(); tempi++)
-                                        {
-                                            if (Aud[tempi].name == temprec.aud)
-                                            {
-                                                Aud[tempi].setsubject(temprec.toAud(), 2 + plus, tmpi);
-                                                break;
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                        Auditor tempaud = new Auditor();
-                                        tempaud.setname(temprec.aud);
-                                        tempaud.setsubject(temprec.toAud(), 2 + plus, tmpi);
-                                        Aud.Add(tempaud);
-                                    }
+                                flag = 0;
+                                Tmass.Add(temp);
                             }
-                        }
+                        /*  ------------------- */
                     }
-                    else if (mass[i] == "Чтв")
-                    {
-                        for (int tmpi = 0; tmpi < 6; tmpi++)
-                        {
-                            i++;
-                            if (mass[i].Contains('_'))
-                                mass[i] = "       ";
-                            else
-                            {
-                                record temprec = takeapart(mass[i]);
-                                if ((temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K') && colledge == false)
-                                    break;
-                                temprec.teacher = temp.getname();
-                                if (type == 'b')
-                                    temp.setsubject(temprec.toTeacher(), 3 + plus, tmpi);
-                                else if (temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K' || temprec.group[0] == 'М' || temprec.group[1] == 'М')
-                                {
-                                    bool checkflag1 = true;
+                    ///////////////////////
 
-
-                                    for (int search = 0; search < Tmass.Count; search++)
-                                    {
-                                        if (temp.getname() == Tmass[search].getname())
-                                        {
-                                            Tmass[search].setsubject(temprec.toTeacher(), 3 + plus, tmpi);
-                                            checkflag1 = false;
-                                        }
-                                    }
-
-                                    if (checkflag1)
-                                    {
-                                        temp.setsubject(temprec.toTeacher(), 3 + plus, tmpi);
-                                        inputcounter++;
-                                    }
-                                }
-                                if (type == 'b' || inputcounter>0)
-                                    if (Auditor.Contains(temprec.aud))
-                                    {
-                                        for (int tempi = 0; tempi < Aud.Count(); tempi++)
-                                        {
-                                            if (Aud[tempi].name == temprec.aud)
-                                            {
-                                                Aud[tempi].setsubject(temprec.toAud(), 3 + plus, tmpi);
-                                                break;
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                        Auditor tempaud = new Auditor();
-                                        tempaud.setname(temprec.aud);
-                                        tempaud.setsubject(temprec.toAud(), 3 + plus, tmpi);
-                                        Aud.Add(tempaud);
-                                    }
-                            }
-                        }
-                    }
-                    else if (mass[i] == "Птн")
-                    {
-                        for (int tmpi = 0; tmpi < 6; tmpi++)
-                        {
-                            i++;
-                            if (mass[i].Contains('_'))
-                                mass[i] = "       ";
-                            else
-                            {
-                                record temprec = takeapart(mass[i]);
-                                if ((temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K') && colledge == false)
-                                    break;
-                                temprec.teacher = temp.getname();
-                                if (type == 'b')
-                                    temp.setsubject(temprec.toTeacher(), 4 + plus, tmpi);
-                                else if (temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K' || temprec.group[0] == 'М' || temprec.group[1] == 'М')
-                                {
-                                    bool checkflag1 = true;
-
-
-                                    for (int search = 0; search < Tmass.Count; search++)
-                                    {
-                                        if (temp.getname() == Tmass[search].getname())
-                                        {
-                                            Tmass[search].setsubject(temprec.toTeacher(), 4 + plus, tmpi);
-                                            checkflag1 = false;
-                                        }
-                                    }
-
-                                    if (checkflag1)
-                                    {
-                                        temp.setsubject(temprec.toTeacher(), 4 + plus, tmpi);
-                                        inputcounter++;
-                                    }
-                                }
-                                if (type == 'b' || inputcounter>0)
-                                    if (Auditor.Contains(temprec.aud))
-                                    {
-                                        for (int tempi = 0; tempi < Aud.Count(); tempi++)
-                                        {
-                                            if (Aud[tempi].name == temprec.aud)
-                                            {
-                                                Aud[tempi].setsubject(temprec.toAud(), 4 + plus, tmpi);
-                                                break;
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                        Auditor tempaud = new Auditor();
-                                        tempaud.setname(temprec.aud);
-                                        tempaud.setsubject(temprec.toAud(), 4 + plus, tmpi);
-                                        Aud.Add(tempaud);
-                                    }
-                            }
-                        }
-                    }
-                    else if (mass[i] == "Сбт")
-                    {
-                        for (int tmpi = 0; tmpi < 6; tmpi++)
-                        {
-                            i++;
-                            if (mass[i].Contains('_'))
-                                mass[i] = "       ";
-                            else
-                            {
-                                record temprec = takeapart(mass[i]);
-                                if ((temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K') && colledge == false)
-                                    break;
-                                temprec.teacher = temp.getname();
-                                if (type == 'b')
-                                    temp.setsubject(temprec.toTeacher(), 5 + plus, tmpi);
-                                else if (temprec.group[0] == 'К' || temprec.group[0] == 'K' || temprec.group[1] == 'К' || temprec.group[1] == 'K' || temprec.group[0] == 'М' || temprec.group[1] == 'М')
-                                {
-                                    bool checkflag1 = true;
-
-
-                                    for (int search = 0; search < Tmass.Count; search++)
-                                    {
-                                        if (temp.getname() == Tmass[search].getname())
-                                        {
-                                            Tmass[search].setsubject(temprec.toTeacher(), 5 + plus, tmpi);
-                                            checkflag1 = false;
-                                        }
-                                    }
-
-                                    if (checkflag1)
-                                    {
-                                        temp.setsubject(temprec.toTeacher(), 5 + plus, tmpi);
-                                        inputcounter++;
-                                    }
-                                }
-                                if (type == 'b' || inputcounter>0)
-                                    if (Auditor.Contains(temprec.aud))
-                                    {
-                                        for (int tempi = 0; tempi < Aud.Count(); tempi++)
-                                        {
-                                            if (Aud[tempi].name == temprec.aud)
-                                            {
-                                                Aud[tempi].setsubject(temprec.toAud(), 5 + plus, tmpi);
-                                                break;
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                        Auditor tempaud = new Auditor();
-                                        tempaud.setname(temprec.aud);
-                                        tempaud.setsubject(temprec.toAud(), 5 + plus, tmpi);
-                                        Aud.Add(tempaud);
-                                    }
-                            }
-                        }
-                        if (flag == 1) flag = 2;
-                        //else if(type=='b')
-                        else if(inputcounter>0 || type == 'b')
-                        {
-                            flag = 0;
-                            Tmass.Add(temp);
-                        }
-                        //else
-                        //{
-                        //    bool ffl = true;
-                        //    for(int ij1=0;ij1<Tmass.Count;ij1++)
-                        //    {
-                        //        if (Tmass[ij1].name == temp.name)
-                        //        {
-                        //            ffl = false;
-                        //            break;
-                        //        }
-                        //    }
-                        //    if (ffl)
-                        //    {
-                        //        flag = 0;
-                        //        Tmass.Add(temp);
-                        //    }
-                        //}
-                    }
                 }
             }
         }  
@@ -787,6 +549,7 @@ namespace Rasp
             for (int i = 0; i < mass.Count()-1; i++)
             {
                 if (i < 0) i = 0;
+                if (mass[i] == null) continue;
                 for (int j = 0; j < mass[i].Length; j++)
                 {
                    
@@ -907,7 +670,7 @@ namespace Rasp
             comboBox1.Items.Clear();
             Cursor.Current = Cursors.WaitCursor;
             mass.Clear();
-            start();
+            start(linkb,linkm);
             comboBox1.SelectedIndex = 0;
             
             Cursor.Current = Cursors.Arrow;
@@ -1013,7 +776,7 @@ namespace Rasp
             }
             catch
             {
-                MessageBox.Show("Нету доступа к Excel файлу шаблона.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Нету доступа к Excel файлу шаблона/Неправильно введена аудитория!!!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1040,11 +803,15 @@ namespace Rasp
             form4.textBox2.Text = linkm;
             form4.checkBox1.Checked = colledge;
             form4.ShowDialog();
-            if(form4.flagger==1)
+            form4.numericUpDown1.Value = indexFromCaf;
+            form4.numericUpDown2.Value = indexToCaf;
+            if (form4.flagger==1)
             {
                 colledge = form4.checkBox1.Checked;
                 linkb = form4.textBox1.Text;
                 linkm = form4.textBox2.Text;
+                indexFromCaf = Convert.ToInt32(form4.numericUpDown1.Value);
+                indexToCaf = Convert.ToInt32(form4.numericUpDown2.Value);
                 string fileName = System.Windows.Forms.Application.StartupPath + "\\" + "configuration" + ".cfg";
                 // Create a file to write to.
                     using (StreamWriter sw = File.CreateText(fileName))
@@ -1078,7 +845,7 @@ namespace Rasp
                 comboBox1.Items.Clear();
                 Cursor.Current = Cursors.WaitCursor;
                 mass.Clear();
-                start();
+                start(linkb,linkm);
                 comboBox1.SelectedIndex = 0;
 
                 Cursor.Current = Cursors.Arrow;
@@ -1230,6 +997,24 @@ namespace Rasp
         {
             show();
         }
+
+        private void загрузитьРасписаниеВсехToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Tmass.Clear();
+            Aud.Clear();
+            Auditor.ClearExistc();
+            comboBox1.Items.Clear();
+            Cursor.Current = Cursors.WaitCursor;
+            mass.Clear();
+            List<string> massOther = new List<string>();
+            for (int i = 1; i <= 53; i++)
+                start(("https://portal.esstu.ru/bakalavriat/Caf" + i.ToString() + ".htm").ToString(), ("https://portal.esstu.ru/spezialitet/Caf" + i.ToString() + ".htm").ToString());
+            comboBox1.SelectedIndex = 0;
+
+            Cursor.Current = Cursors.Arrow;
+        }
+        
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {

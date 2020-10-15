@@ -34,5 +34,25 @@ namespace Rasp
             textBox1.Text = "https://portal.esstu.ru/bakalavriat/Caf40.htm";
             textBox2.Text = "https://portal.esstu.ru/spezialitet/Caf44.htm";
         }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            if (numericUpDown1.Value >= numericUpDown2.Value)
+            {
+                numericUpDown1.Value--;
+                MessageBox.Show("Первое число должно быть меньше второго!", "Инфо", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            if (numericUpDown1.Value >= numericUpDown2.Value)
+            {
+                numericUpDown1.Value--;
+                MessageBox.Show("Первое число должно быть меньше второго!", "Инфо", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+        }
     }
 }
